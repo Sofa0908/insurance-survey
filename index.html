@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tesla 保險</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo" aria-label="Tesla">TESLA</div>
+    <nav class="nav-links" aria-label="主要導覽">
+      <a href="#partners">合作夥伴</a>
+      <a href="#benefits">優勢</a>
+      <a href="#advisor">顧問建議</a>
+      <a href="#process">流程</a>
+      <a href="#coverage">保障</a>
+      <a href="#savings">節省</a>
+      <a href="#faq">常見問題</a>
+    </nav>
+    <div class="header-actions">
+      <button class="ghost">支援</button>
+      <button class="cta">取得報價</button>
+    </div>
+    <button class="menu-toggle" aria-label="開啟選單">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-content animate-on-load">
+        <p class="eyebrow" data-animate style="--delay: 0.05s">為台灣 Tesla 車主量身打造的保險</p>
+        <h1 data-animate style="--delay: 0.15s">30 秒掌握 Tesla 保費關鍵，專人主動回電</h1>
+        <p class="lede" data-animate style="--delay: 0.25s">先用這裡的資訊看懂費率怎麼算、保障怎麼挑，再填寫表單留下電話或 LINE ID，合作產險顧問（例：和泰、富邦、國泰、新光產險夥伴）會主動致電提供正式報價與建議。</p>
+        <div class="hero-actions" data-animate style="--delay: 0.35s">
+          <button class="cta">填寫表單取得報價</button>
+          <button class="ghost">預約顧問諮詢</button>
+        </div>
+        <div class="metrics" data-animate style="--delay: 0.45s">
+          <div class="metric card-fade">
+            <span class="metric-value counter" data-target="500" data-suffix="+">0</span>
+            <span class="metric-label">車主已透過顧問取得報價</span>
+          </div>
+          <div class="metric card-fade">
+            <span class="metric-value counter" data-target="8000" data-prefix="NT$">0</span>
+            <span class="metric-label">平均為每位車主節省的年度保費</span>
+          </div>
+          <div class="metric card-fade">
+            <span class="metric-value counter" data-target="98" data-suffix="%">0</span>
+            <span class="metric-label">顧問回覆滿意度，24 小時內主動致電</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card animate-on-load" aria-live="polite">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">互動式報價</p>
+            <h3>安全分數帶來的優惠</h3>
+          </div>
+          <span class="badge">即時</span>
+        </div>
+        <div class="score">
+          <p>安全分數</p>
+          <div class="score-value">97</div>
+          <div class="score-meter" aria-hidden="true">
+            <span style="width: 85%"></span>
+          </div>
+        </div>
+          <div class="rate">
+            <p>預估每月保費</p>
+            <h2 class="premium">NT$2,480</h2>
+            <p class="muted">根據您最近一次的行程</p>
+          </div>
+          <div class="inputs">
+            <label>年度里程（公里）
+              <input type="range" min="5000" max="20000" value="12000" data-range="mileage" />
+              <span class="range-value" data-range-value="mileage">12,000 公里</span>
+            </label>
+          <label>保單駕駛人數
+            <input type="range" min="1" max="4" value="2" data-range="drivers" />
+            <span class="range-value" data-range-value="drivers">2 位駕駛</span>
+          </label>
+        </div>
+        <button class="primary">開始取得報價</button>
+      </div>
+    </section>
+
+    <section id="partners" class="panel">
+      <div class="section-header reveal-on-scroll">
+        <p class="eyebrow">合作夥伴</p>
+        <h2>與台灣主要產險公司共同提供</h2>
+        <p class="description">我們整合多家本地保險公司，確保在費率、理賠流程與合規要求上都能符合台灣車主的期待。</p>
+      </div>
+      <div class="partner-grid">
+        <article class="partner-card reveal-on-scroll">
+          <div class="partner-title">和泰產險</div>
+          <p class="muted">深耕車險市場，提供 Tesla 車主專屬維修與救援網路。</p>
+          <span class="badge subtle">台灣</span>
+        </article>
+        <article class="partner-card reveal-on-scroll">
+          <div class="partner-title">富邦產險</div>
+          <p class="muted">結合智慧保單與全台通路，理賠與客服流程透明快速。</p>
+          <span class="badge subtle">全台</span>
+        </article>
+        <article class="partner-card reveal-on-scroll">
+          <div class="partner-title">國泰產險</div>
+          <p class="muted">針對電動車電池、充電設備與玻璃提供額外保障。</p>
+          <span class="badge subtle">EV 保障</span>
+        </article>
+        <article class="partner-card reveal-on-scroll">
+          <div class="partner-title">新光產險</div>
+          <p class="muted">提供多元增購方案，包含租車補貼與車主專屬客服。</p>
+          <span class="badge subtle">客製化</span>
+        </article>
+      </div>
+      <div class="partner-note">
+        <p class="muted">以上為常見合作夥伴，實際承保公司將依您的車籍資料與所在地由顧問搭配。</p>
+        <a class="inline-link" href="#faq">查看常見問題</a>
+      </div>
+    </section>
+
+    <section id="benefits" class="panel">
+      <div class="section-header reveal-on-scroll">
+        <p class="eyebrow">為何選擇 Tesla 保險</p>
+        <h2>安全駕駛即可享有更優惠的保費</h2>
+        <p class="description">保費範例依照即時駕駛行為計算，實際方案將由保險業務員根據您的資料再次確認。</p>
+      </div>
+      <div class="grid">
+        <article class="feature reveal-on-scroll">
+          <div class="icon">⚡</div>
+          <h3>全面整合</h3>
+          <p>顧問會協助整理保單、理賠與維修管道資訊，並提供後續追蹤聯繫方式。</p>
+        </article>
+        <article class="feature reveal-on-scroll">
+          <div class="icon">🛰️</div>
+          <h3>內建遠端資訊</h3>
+          <p>運用車輛感測器評估安全分數，無需額外硬體。</p>
+        </article>
+        <article class="feature reveal-on-scroll">
+          <div class="icon">🔒</div>
+          <h3>專為 Tesla 打造</h3>
+          <p>涵蓋 Autopilot、玻璃、電池與車載科技的完整保障，細節會在顧問回電時說明。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="advisor" class="panel light">
+      <div class="section-header reveal-on-scroll">
+        <p class="eyebrow">資深顧問觀點</p>
+        <h2>專為台灣車主設計的投保建議</h2>
+        <p class="description">由資深保險業務員整理的重點，幫助您在預約顧問時快速釐清需求，談到重點。</p>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card reveal-on-scroll">
+          <div class="insight-icon">🛡️</div>
+          <div>
+            <h3>自負額與保額平衡</h3>
+            <p class="muted">高車價、全景玻璃與電池成本都偏高，可考慮「較高自負額 + 足額保額」的組合，兼顧保費與理賠幅度。</p>
+          </div>
+        </article>
+        <article class="insight-card reveal-on-scroll">
+          <div class="insight-icon">🚚</div>
+          <div>
+            <h3>通勤 vs. 營業使用</h3>
+            <p class="muted">職業駕駛、長途或高里程會影響費率，提前告知顧問可加速媒合合適的產險公司與核保條件。</p>
+          </div>
+        </article>
+        <article class="insight-card reveal-on-scroll">
+          <div class="insight-icon">🔌</div>
+          <div>
+            <h3>充電與停車環境</h3>
+            <p class="muted">自家壁掛、公共充電或路邊停車環境不同，建議加選壁掛充電設備與玻璃險，降低停放風險。</p>
+          </div>
+        </article>
+          <article class="insight-card reveal-on-scroll">
+            <div class="insight-icon">🗂️</div>
+          <div>
+            <h3>準備文件更快核保</h3>
+            <p class="muted">行照、雙證件、車牌照片與近 30 天里程數據先備齊，核保、加保或續保一次到位。</p>
+          </div>
+        </article>
+      </div>
+      <div class="callout">
+        <div>
+          <p class="eyebrow">顧問小提醒</p>
+          <h3>20 分鐘電話或 LINE 通話，就能完成需求盤點</h3>
+          <p class="muted">我們會在諮詢後提供 2-3 家產險方案並說明差異，避免只比較單一公司。</p>
+        </div>
+        <div class="callout-actions">
+          <button class="primary">預約 20 分鐘諮詢</button>
+          <p class="micro">LINE、電話、Google Meet 皆可，24 小時內安排。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="coverage" class="panel light">
+      <div class="section-header reveal-on-scroll">
+        <p class="eyebrow">保障項目</p>
+        <h2>為您的 Tesla 打造的專屬守護</h2>
+        <p class="description">標準與可選保障皆可個人化設定，搭配您的駕駛習慣與台灣交通規範選擇最適合的方案。</p>
+      </div>
+      <div class="coverage-grid">
+        <div class="coverage-item">
+          <h4>強制汽車責任險</h4>
+          <p>符合台灣法規的基本保障，補償您在駕駛時可能造成他人傷害的風險。</p>
+        </div>
+        <div class="coverage-item">
+          <h4>車體碰撞與綜合險</h4>
+          <p>防範碰撞、失竊、毀損與惡劣天候對車輛造成的損害。</p>
+        </div>
+        <div class="coverage-item">
+          <h4>電池與壁掛充電器</h4>
+          <p>涵蓋高壓電池與家用充電設備的維修或更換。</p>
+        </div>
+        <div class="coverage-item">
+          <h4>道路救援</h4>
+          <p>全天候協助拖吊、解鎖與輪胎服務，無論您行駛至哪裡，符合台灣道路救援習慣。</p>
+        </div>
+        <div class="coverage-item">
+          <h4>玻璃險</h4>
+          <p>為全景玻璃與鏡頭校準提供專門的保障。</p>
+        </div>
+        <div class="coverage-item">
+          <h4>租車與替代交通</h4>
+          <p>車輛維修期間，提供租車、共乘或大眾運輸的每日補貼。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="panel">
+      <div class="section-header reveal-on-scroll">
+        <p class="eyebrow">服務流程</p>
+        <h2>以顧問為核心的 4 步驟體驗</h2>
+        <p class="description">設計給忙碌的車主：一次填寫，顧問代為媒合、比較與解說，省下自行詢價的時間成本。</p>
+      </div>
+      <div class="process-grid">
+        <article class="process-card reveal-on-scroll">
+          <div class="step">01</div>
+          <h3>填寫表單</h3>
+          <p class="muted">提供車款、年份、里程與停車環境，約 30 秒完成。</p>
+        </article>
+        <article class="process-card reveal-on-scroll">
+          <div class="step">02</div>
+          <h3>顧問聯繫</h3>
+          <p class="muted">24 小時內回覆，確認通勤/營業使用與預算偏好。</p>
+        </article>
+        <article class="process-card reveal-on-scroll">
+          <div class="step">03</div>
+          <h3>雙重比價</h3>
+          <p class="muted">一次提供 2-3 家台灣產險方案，清楚列出差異與自負額。</p>
+        </article>
+        <article class="process-card reveal-on-scroll">
+          <div class="step">04</div>
+          <h3>核保開通</h3>
+          <p class="muted">線上簽署與付款由顧問引導完成；後續續保與理賠改由專人追蹤通知。</p>
+        </article>
+      </div>
+      <div class="assurance">
+        <div>
+          <p class="eyebrow">合規透明</p>
+          <h3>保險服務由台灣合格經紀人團隊提供</h3>
+          <p class="muted">完整揭露佣金與承保公司，理賠協助與續保提醒皆由專人跟進。</p>
+        </div>
+        <div class="assurance-list">
+          <span>⚖️ 金管會核備證照</span>
+          <span>📑 條款、排除與自負額清楚揭露</span>
+          <span>🔁 續保與增額提醒</span>
+          <span>🤝 在地維修與救援通路</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="savings" class="panel">
+      <div class="section-header reveal-on-scroll">
+        <p class="eyebrow">更低費率</p>
+        <h2>費率依安全分數而定</h2>
+        <p class="description">每月保費會依行程中量測的五大安全因子調整。保持安全習慣，費用自然下降。</p>
+      </div>
+      <div class="savings">
+        <div class="savings-list">
+          <div class="savings-item">
+            <h4>前向碰撞警示</h4>
+            <p>避免跟車距離過近並保持注意力，可降低警示次數。</p>
+          </div>
+          <div class="savings-item">
+            <h4>急煞</h4>
+            <p>維持足夠車距以減少急煞狀況。</p>
+          </div>
+          <div class="savings-item">
+            <h4>激烈轉彎</h4>
+            <p>平順轉向能提升乘坐舒適度，也能改善安全分數。</p>
+          </div>
+          <div class="savings-item">
+            <h4>跟車過近</h4>
+            <p>善用 Autopilot 或定速巡航，保持更安全的車距。</p>
+          </div>
+          <div class="savings-item">
+            <h4>強制退出 Autopilot</h4>
+            <p>雙手維持握方向盤並隨時注意路況，避免 Autopilot 被迫關閉。</p>
+          </div>
+        </div>
+        <div class="savings-card">
+          <div class="score-meter large" aria-hidden="true">
+            <span style="width: 82%"></span>
+          </div>
+          <div class="score-detail">
+            <div>
+              <p class="eyebrow">目前安全分數</p>
+              <h2>95</h2>
+            </div>
+            <div class="badge">保費更低</div>
+          </div>
+          <p class="muted">保費會依您過去 30 天的駕駛表現每月更新。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="panel light">
+      <div class="section-header reveal-on-scroll">
+        <p class="eyebrow">常見問題</p>
+        <h2>快速解答</h2>
+        <p class="description">取得有關適用地區、理賠與費率運作方式的快速說明。</p>
+      </div>
+        <div class="faq">
+          <details open>
+            <summary>Tesla 保險在台灣哪些地區提供？</summary>
+            <p>Tesla 保險目前針對台灣主要縣市提供，適用資格與保障範圍會因地區而有所不同。</p>
+          </details>
+        <details>
+          <summary>我的保費如何計算？</summary>
+          <p>保費取決於安全分數、車輛配置以及您選擇的保障項目，並會每月更新。</p>
+        </details>
+        <details>
+          <summary>填表後多久會有人聯繫我？</summary>
+          <p>通常在 24 小時內會有保險業務員透過電話或 LINE 與您確認需求與預算，並提供正式報價。</p>
+        </details>
+        <details>
+          <summary>與哪些台灣保險公司合作？</summary>
+          <p>常見合作夥伴包含和泰產險、富邦產險、國泰產險與新光產險；顧問會依您的車籍資料與所在地協助媒合最合適的承保公司。</p>
+        </details>
+        <details>
+          <summary>需要額外安裝硬體嗎？</summary>
+          <p>不需要。安全分數直接使用車輛內建的感測器。</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <div class="logo">Tesla 保險</div>
+      <p class="muted">保險服務由台灣合格產險公司提供，條款與排除條件請依保單為準。</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">隱私權</a>
+      <a href="#">條款</a>
+      <a href="#">支援</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
