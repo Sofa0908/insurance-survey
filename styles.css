@@ -453,7 +453,10 @@ main {
 .inputs select,
 .hero-card input,
 .hero-card select,
-.hero-card textarea {
+.hero-card textarea,
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
   background: var(--surface-soft);
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -463,7 +466,9 @@ main {
 
 .inputs input::placeholder,
 .hero-card input::placeholder,
-.hero-card textarea::placeholder {
+.hero-card textarea::placeholder,
+.quote-form input::placeholder,
+.quote-form textarea::placeholder {
   color: var(--muted);
 }
 
