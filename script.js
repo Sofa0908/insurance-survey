@@ -36,6 +36,15 @@
     });
   });
 
+  const quoteForm = document.querySelector('.quote-form');
+  const quoteStatus = document.querySelector('.form-status');
+
+  quoteForm?.addEventListener('submit', () => {
+    if (quoteStatus) {
+      quoteStatus.textContent = '感謝填寫！資料已送出，顧問將在 24 小時內與您聯繫。';
+    }
+  });
+
   const formatNumber = (value) => value.toLocaleString('zh-TW');
   const formatCurrency = (value) => `NT$${Math.round(value).toLocaleString('zh-TW')}`;
 
