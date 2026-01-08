@@ -99,50 +99,36 @@
       </div>
       <form
         class="quote-form reveal-on-scroll"
-        action="https://docs.google.com/forms/d/1FkfZkOd3qk7tfSM24AYKWeTg-h6ktgL-ohRrspffmGU/formResponse"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSeFtBSgNMvgNg9lm7DhGRcGUySvkoFbCMBu6BhYL6JRhCSzfw/formResponse"
         method="post"
         target="quote-form-target"
       >
-        <!-- TODO: 更新以下 entry.* 欄位為 Google 表單實際的欄位 ID -->
         <div class="quote-form-grid">
-          <label class="field">姓名
-            <input type="text" name="entry.1111111111" autocomplete="name" placeholder="王小明" required />
-          </label>
-          <label class="field">聯絡電話
-            <input type="tel" name="entry.2222222222" autocomplete="tel" placeholder="0912-345-678" required />
-          </label>
-          <label class="field">Email
-            <input type="email" name="entry.3333333333" autocomplete="email" placeholder="name@email.com" />
-          </label>
-          <label class="field">LINE ID（選填）
-            <input type="text" name="entry.4444444444" placeholder="@teslaowner" />
-          </label>
-          <label class="field">車型
-            <input type="text" name="entry.5555555555" placeholder="Model 3 / Model Y" />
-          </label>
-          <label class="field">所在縣市
-            <input type="text" name="entry.6666666666" placeholder="台北市 / 新北市" />
-          </label>
-          <label class="field">偏好聯絡方式
-            <select name="entry.7777777777">
-              <option value="電話">電話</option>
-              <option value="LINE">LINE</option>
-              <option value="Email">Email</option>
+          <label class="field">稱呼
+            <select name="entry.944025049" required>
+              <option value="先生">先生</option>
+              <option value="小姐">小姐</option>
             </select>
           </label>
+          <label class="field">姓名
+            <input type="text" name="entry.1745549330" autocomplete="name" placeholder="王小明" required />
+          </label>
+          <label class="field">聯絡電話
+            <input type="tel" name="entry.1923081681" autocomplete="tel" placeholder="0912-345-678" required />
+          </label>
+          <label class="field">LINE ID（選填）
+            <input type="text" name="entry.1546285631" placeholder="@teslaowner" />
+          </label>
           <label class="field">可聯絡時段
-            <select name="entry.8888888888">
-              <option value="平日白天">平日白天</option>
-              <option value="平日晚間">平日晚間</option>
+            <select name="entry.970746905">
+              <option value="平日白天 (9:00 - 18:00)">平日白天 (9:00 - 18:00)</option>
+              <option value="平日晚間 (18:00 - 21:00)">平日晚間 (18:00 - 21:00)</option>
               <option value="週末">週末</option>
             </select>
           </label>
         </div>
-        <label class="field">需求描述（選填）
-          <textarea name="entry.9999999999" rows="4" placeholder="例如：需要含電池險、玻璃險，或想比較不同產險公司"></textarea>
-        </label>
         <div class="quote-form-footer">
-          <p class="micro form-note">送出後資料會寫入 Google 表單並同步到您的試算表，若需調整欄位請更新上方 entry.* ID。</p>
+          <p class="micro form-note">送出後資料會寫入 Google 表單並同步到您的試算表。</p>
           <button class="primary" type="submit">送出取得報價</button>
         </div>
         <p class="form-status" role="status" aria-live="polite"></p>
