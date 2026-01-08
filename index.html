@@ -13,6 +13,7 @@
   <header class="site-header">
     <div class="logo" aria-label="Tesla">TESLA</div>
     <nav class="nav-links" aria-label="主要導覽">
+      <a href="#quote-form">表單</a>
       <a href="#partners">合作夥伴</a>
       <a href="#benefits">優勢</a>
       <a href="#advisor">顧問建議</a>
@@ -23,7 +24,7 @@
     </nav>
     <div class="header-actions">
       <button class="ghost">支援</button>
-      <button class="cta">取得報價</button>
+      <a class="cta" href="#quote-form">取得報價</a>
     </div>
     <button class="menu-toggle" aria-label="開啟選單">
       <span></span>
@@ -39,8 +40,8 @@
         <h1 data-animate style="--delay: 0.15s">30 秒掌握 Tesla 保費關鍵，專人主動回電</h1>
         <p class="lede" data-animate style="--delay: 0.25s">先用這裡的資訊看懂費率怎麼算、保障怎麼挑，再填寫表單留下電話或 LINE ID，合作產險顧問（例：和泰、富邦、國泰、新光產險夥伴）會主動致電提供正式報價與建議。</p>
         <div class="hero-actions" data-animate style="--delay: 0.35s">
-          <button class="cta">填寫表單取得報價</button>
-          <button class="ghost">預約顧問諮詢</button>
+          <a class="cta" href="#quote-form">填寫表單取得報價</a>
+          <a class="ghost" href="#quote-form">預約顧問諮詢</a>
         </div>
         <div class="metrics" data-animate style="--delay: 0.45s">
           <div class="metric card-fade">
@@ -87,8 +88,53 @@
             <span class="range-value" data-range-value="drivers">2 位駕駛</span>
           </label>
         </div>
-        <button class="primary">開始取得報價</button>
+        <a class="primary" href="#quote-form">開始取得報價</a>
       </div>
+    </section>
+
+    <section id="quote-form" class="panel light quote-panel">
+      <div class="section-header reveal-on-scroll">
+        <p class="eyebrow">留下聯絡資訊</p>
+        <h2>快速取得 Tesla 保險顧問回電</h2>
+        <p class="description">填寫以下資料後會送至 Google 表單並同步到您的試算表，顧問將在 24 小時內回電提供報價。</p>
+      </div>
+      <form
+        class="quote-form reveal-on-scroll"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSeFtBSgNMvgNg9lm7DhGRcGUySvkoFbCMBu6BhYL6JRhCSzfw/formResponse"
+        method="post"
+        target="quote-form-target"
+      >
+        <div class="quote-form-grid">
+          <label class="field">稱呼
+            <select name="entry.944025049" required>
+              <option value="先生">先生</option>
+              <option value="小姐">小姐</option>
+            </select>
+          </label>
+          <label class="field">姓名
+            <input type="text" name="entry.1745549330" autocomplete="name" placeholder="王小明" required />
+          </label>
+          <label class="field">聯絡電話
+            <input type="tel" name="entry.1923081681" autocomplete="tel" placeholder="0912-345-678" required />
+          </label>
+          <label class="field">LINE ID（選填）
+            <input type="text" name="entry.1546285631" placeholder="@teslaowner" />
+          </label>
+          <label class="field">可聯絡時段
+            <select name="entry.970746905">
+              <option value="平日白天 (9:00 - 18:00)">平日白天 (9:00 - 18:00)</option>
+              <option value="平日晚間 (18:00 - 21:00)">平日晚間 (18:00 - 21:00)</option>
+              <option value="週末">週末</option>
+            </select>
+          </label>
+        </div>
+        <div class="quote-form-footer">
+          <p class="micro form-note">送出後資料會寫入 Google 表單並同步到您的試算表。</p>
+          <button class="primary" type="submit">送出取得報價</button>
+        </div>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <iframe name="quote-form-target" class="form-target" title="quote form target" aria-hidden="true"></iframe>
     </section>
 
     <section id="partners" class="panel">
@@ -193,7 +239,7 @@
           <p class="muted">我們會在諮詢後提供 2-3 家產險方案並說明差異，避免只比較單一公司。</p>
         </div>
         <div class="callout-actions">
-          <button class="primary">預約 20 分鐘諮詢</button>
+          <a class="primary" href="#quote-form">預約 20 分鐘諮詢</a>
           <p class="micro">LINE、電話、Google Meet 皆可，24 小時內安排。</p>
         </div>
       </div>

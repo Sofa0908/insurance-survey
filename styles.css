@@ -177,6 +177,9 @@ a {
 .cta,
 .ghost,
 .primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.75rem 1.2rem;
   border-radius: 999px;
   border: 1px solid var(--text);
@@ -185,6 +188,7 @@ a {
   color: #0b101a;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease, color 0.2s ease;
+  text-decoration: none;
 }
 
 .cta:hover,
@@ -449,7 +453,10 @@ main {
 .inputs select,
 .hero-card input,
 .hero-card select,
-.hero-card textarea {
+.hero-card textarea,
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
   background: var(--surface-soft);
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -459,7 +466,9 @@ main {
 
 .inputs input::placeholder,
 .hero-card input::placeholder,
-.hero-card textarea::placeholder {
+.hero-card textarea::placeholder,
+.quote-form input::placeholder,
+.quote-form textarea::placeholder {
   color: var(--muted);
 }
 
@@ -483,6 +492,55 @@ main {
   width: 100%;
   background: var(--accent);
   border-color: var(--accent);
+}
+
+#quote-form {
+  scroll-margin-top: 120px;
+}
+
+.quote-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.quote-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.quote-form .field {
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.quote-form textarea {
+  resize: vertical;
+}
+
+.quote-form-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-note {
+  max-width: 560px;
+}
+
+.form-status {
+  margin: 0;
+  color: var(--muted);
+}
+
+.form-target {
+  width: 0;
+  height: 0;
+  border: 0;
+  visibility: hidden;
 }
 
 .panel {
