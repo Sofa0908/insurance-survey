@@ -1025,4 +1025,501 @@ main {
     width: 40px;
     height: 40px;
   }
+
+  .ins-tabs {
+    gap: 0.5rem;
+  }
+
+  .ins-tab {
+    font-size: 0.82rem;
+    padding: 0.55rem 0.9rem;
+  }
+
+  .ins-check-list {
+    grid-template-columns: 1fr;
+  }
+
+  .coverage-table th,
+  .coverage-table td {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* ── Insurance Types Tabs ── */
+#insurance-types,
+#coverage-matrix {
+  scroll-margin-top: 80px;
+}
+
+.ins-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.ins-tab {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.ins-tab:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.ins-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.ins-tab-panels {
+  min-height: 180px;
+}
+
+.ins-tab-panel {
+  display: none;
+}
+
+.ins-tab-panel.active {
+  display: block;
+}
+
+.ins-tab-panel h3 {
+  margin: 0.5rem 0 0.25rem;
+}
+
+.ins-tab-panel h4 {
+  margin: 1rem 0 0.5rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.ins-badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.ins-badge.main {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+}
+
+.ins-badge.addon {
+  background: rgba(154, 167, 189, 0.15);
+  color: var(--muted);
+}
+
+.ins-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.6rem;
+}
+
+.ins-check-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+}
+
+.ins-check-list li::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Coverage Matrix Table ── */
+.coverage-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.coverage-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+  font-size: 0.9rem;
+}
+
+.coverage-table th,
+.coverage-table td {
+  padding: 0.75rem 0.7rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.coverage-table thead th {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.coverage-table th.col-type,
+.coverage-table td.row-label {
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.coverage-table th.group-self {
+  background: rgba(34, 197, 94, 0.08);
+  color: #86efac;
+}
+
+.coverage-table th.group-other {
+  background: rgba(96, 165, 250, 0.08);
+  color: #93c5fd;
+}
+
+.coverage-table td.group-self {
+  background: rgba(34, 197, 94, 0.03);
+}
+
+.coverage-table td.group-other {
+  background: rgba(96, 165, 250, 0.03);
+}
+
+.coverage-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.coverage-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.coverage-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cm-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.coverage-table-note {
+  margin-top: 0.5rem;
+}
+
+/* ── Vehicle Body Insurance Table ── */
+#vehicle-body {
+  scroll-margin-top: 80px;
+}
+
+.vb-table {
+  min-width: 420px;
+}
+
+.vb-table thead th:not(.col-type) {
+  background: rgba(34, 197, 94, 0.08);
+  color: #86efac;
+  min-width: 80px;
+}
+
+/* ── Buying Guide (3 Points) ── */
+#buying-guide {
+  scroll-margin-top: 80px;
+}
+
+.guide-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.guide-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface-soft);
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 197, 94, 0.3);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.08);
+}
+
+.guide-step {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ── Apply Method ── */
+#apply-method {
+  scroll-margin-top: 80px;
+}
+
+.apply-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.apply-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.apply-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 197, 94, 0.25);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.08);
+}
+
+.apply-card-header {
+  padding: 1.5rem 1.5rem 1.25rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.apply-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 0.75rem;
+  border-radius: 50%;
+  background: rgba(154, 167, 189, 0.1);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+}
+
+.apply-card-header h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.apply-badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: rgba(154, 167, 189, 0.12);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.apply-card-body {
+  padding: 1.25rem 1.5rem;
+}
+
+.apply-card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.apply-card-body li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.apply-card-body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+}
+
+@media (max-width: 640px) {
+  .apply-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── EV Insurance ── */
+#ev-insurance {
+  scroll-margin-top: 80px;
+}
+
+.ev-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ev-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.ev-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 197, 94, 0.25);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.08);
+}
+
+.ev-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(154, 167, 189, 0.1);
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+}
+
+.ev-card h3 {
+  margin: 0.25rem 0 0;
+  font-size: 1.05rem;
+}
+
+.ev-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.ev-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.ev-tag::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #facc15;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .ev-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Accident SOP ── */
+#accident-sop {
+  scroll-margin-top: 80px;
+}
+
+.sop-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.sop-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.sop-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 197, 94, 0.25);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.08);
+}
+
+.sop-item p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.sop-step {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sop-label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #4ade80;
+  white-space: nowrap;
+}
+
+.sop-keyword {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
 }

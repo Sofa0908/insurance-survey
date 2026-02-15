@@ -5,8 +5,6 @@
   const nav = document.querySelector('.nav-links');
   const header = document.querySelector('.site-header');
   const premium = document.querySelector('.premium');
-  const scoreValue = document.querySelector('.score-value');
-  const scoreMeter = document.querySelector('.score-meter span');
   const rangeFields = document.querySelectorAll('.inputs input[type="range"]');
   const rangeOutputs = document.querySelectorAll('.range-value');
   const mileageInput = document.querySelector('input[data-range="mileage"]');
@@ -65,23 +63,16 @@
   };
 
   const updateQuote = () => {
-    if (!mileageInput || !driverInput || !premium || !scoreValue || !scoreMeter) return;
+    if (!mileageInput || !driverInput || !premium) return;
 
     const mileage = Number(mileageInput.value);
     const drivers = Number(driverInput.value);
 
-    const scoreSeed = 99 - (mileage - 8000) / 700 - (drivers - 1) * 1.8;
-    const score = Math.max(80, Math.min(99, Math.round(scoreSeed)));
-    const fill = Math.min(100, Math.max(0, ((score - 60) / 40) * 100));
-
     const base = 2480;
     const mileageAdj = ((mileage - 12000) / 1000) * 90;
     const driverAdj = (drivers - 1) * 180;
-    const behaviorAdj = (90 - score) * 35;
-    const quote = Math.max(1580, base + mileageAdj + driverAdj + behaviorAdj);
+    const quote = Math.max(1580, base + mileageAdj + driverAdj);
 
-    scoreValue.textContent = score.toString();
-    scoreMeter.style.width = `${fill}%`;
     premium.textContent = formatCurrency(quote);
   };
 
@@ -199,4 +190,23 @@
     },
     { passive: true }
   );
+
+  // Insurance types tab switching
+  const insTabs = document.querySelectorAll('.ins-tab');
+  const insPanels = document.querySelectorAll('.ins-tab-panel');
+
+  insTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      insTabs.forEach((t) => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      insPanels.forEach((p) => p.classList.remove('active'));
+
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      const panel = document.getElementById(tab.dataset.tab);
+      if (panel) panel.classList.add('active');
+    });
+  });
 })();
